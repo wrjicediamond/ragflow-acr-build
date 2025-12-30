@@ -1,0 +1,25 @@
+# RAGFlow配置文件示例
+server:
+  port: 9380
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/ragflow?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ragflow
+    password: ragflow123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: redis
+    port: 6379
+    password: ""
+    database: 0
+
+ragflow:
+  storage:
+    path: /opt/ragflow/storage
+    max-file-size: 100MB
+  
+  embedding:
+    default-model: bge-large-zh
